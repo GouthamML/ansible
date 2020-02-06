@@ -97,7 +97,7 @@ resource "oci_core_instance" "test_instance" {
 }
 
 provisioner "remote-exec" {
-    inline = ["echo 'Hello World'"]
+    inline = ["echo 'Hello World from goutham ansible repo'"]
 
     connection {
       type        = "ssh"
