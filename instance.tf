@@ -102,7 +102,7 @@ provisioner "remote-exec" {
     connection {
       type        = "ssh"
       user        = "${var.ssh_user}"
-      private_key = "${file("${var.private_key_path}")}"
+      private_key = "${var.ssh_private_key}"
     }
   }
 
