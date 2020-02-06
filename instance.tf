@@ -97,7 +97,7 @@ resource "oci_core_instance" "test_instance" {
 }
 
 provisioner "remote-exec" {
-    inline = ["echo 'Hello World from goutham ansible repo'"]
+    inline = ["touch /home/opc/file_from_terraform"]
 
     connection {
       type        = "ssh"
