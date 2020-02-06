@@ -115,7 +115,7 @@ resource "oci_core_instance" "test_instance" {
 
 # Output the private and public IPs of the instance
 
-output "instance_private_ips" {
+output "instance_private_ips_checking_outputs" {
   value = [oci_core_instance.test_instance.*.private_ip]
 }
 
