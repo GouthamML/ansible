@@ -94,9 +94,7 @@ resource "oci_core_instance" "test_instance" {
   timeouts {
     create = "60m"
   }
-}
-
-provisioner "remote-exec" {
+  provisioner "remote-exec" {
     inline = ["touch /home/opc/file_from_terraform"]
 
     connection {
@@ -105,6 +103,10 @@ provisioner "remote-exec" {
       private_key = "${var.ssh_private_key}"
     }
   }
+  
+}
+
+
 
 /*data "oci_core_instance_devices" "test_instance_devices" {
   count       = var.num_instances
